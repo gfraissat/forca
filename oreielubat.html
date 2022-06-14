@@ -1,0 +1,94 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/sty_popup.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>Jogo da Forca - Tabuleiro</title>
+</head>
+<body>
+    <header>
+    </header>
+    <div class="titulo">
+        <h1>JOGO DA FORCA</h1>
+    </div>
+    <p> </p>
+    <caixa id="esconde-tab2" class="mostra">
+        <input type="hidden" id="inicia-jogo" >
+        <section id="tabuleiro2" >
+
+            <container class="flex-container">
+                <div id="item1" class="item-flex" ></div>
+                <div class="forca-inicial" ></div>
+                <div class="item-flex" >
+                    <div class="letras-digitadas">
+                        <p>LETRAS  DIGITADAS</p>
+                        <textarea class="letras" cols="15" rows="8" readonly></textarea>
+                    </div>
+                    <div class="bt-novoJogo">
+                        <button type="submit" name="novo" class="bt-jogoNovo">Novo Jogo</button></div><div class="bt-desistirJogo">
+                        <button type="submit" name="desistir" class="bt-desistir">Desistir do Jogo</button></div>
+                </div>
+            </container>
+        </section>
+        <section id="tabuleiro2-base">
+            <container class="palavra-escolhida">
+                <p>PALAVRA A DECIFRAR</p>
+                <div class="escolhida">
+                    <ul id="palavra-escolhida"></ul>
+                    <br>
+                    <ul id="linhas"></ul>
+                </div>
+            </container>
+        </section>
+    </caixa>
+    <!--Popup-->
+    <div class="popup-wrapper">
+        <div class="popup">
+          <div class="popup-close">x</div>
+          <div class="popup-content">
+            <h1>PARABÉNS !! </h1>
+            <p> <img src="imagens/emoj_palma.png"></p>
+            <p>VOCÊ SALVOU O HOMEM ARANHA</p>
+            <p class='popup-link'><a class='popup-link' href="#">VAMOS COMEÇAR UM NOVO JOGO?</a></p>
+
+          </div>
+        </div>
+      </div>
+
+    <!--Popupvideo -->
+    <div class="popup-wrapper-perde">
+        <div class="popup">
+          <div class="popup-close">x</div>
+          <div class="popup-content">
+            <h1>AH NÃO !!!</h1>
+            <h1>Sem o Homem Aranha... </h1>
+            <h1>o que será de nós? </h1>
+            <p> <img src="imagens/emoj_perdeu.jpg"></p>
+                            
+            <p><a class='popup-link' href="#">VAMOS COMEÇAR UM NOVO JOGO?</a></p>
+
+          </div>
+        </div>
+      </div>
+</body>
+
+<div class="oracle">
+  <img src="imagens/oneeducation.png" no-repeat >
+</div>
+
+<footer>
+© Created by::: Gerson Fraissat
+</footer>
+
+</html>
+
+<script src='js/tabuleiro2.js'></script>
+<script src="js/app_popup.js"></script>
