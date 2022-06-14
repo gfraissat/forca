@@ -1,0 +1,546 @@
+html, body {
+  width: 98%;
+ /* height: 80vh; 
+  margin: 0; */
+	background-color: #B0E2FF;
+  font-family: 'Montserrat', Arial;
+  font-size: 16px;
+}
+
+header {
+	height: 50px;
+	margin: 10px 30px 0 30px;
+	background:url(../imagens/alura.png) center left no-repeat;
+	background-size: 40px 50px;
+}
+
+.titulo h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #ff0000; /* #1874CD;*/
+	margin: 10px 30px 0 30px;
+	text-align: center;
+}
+
+.esconde {
+	display:none !important
+	}
+
+.mostra {
+	display: block;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+/* TABULEIRO 01  */
+#tabuleiro1 {
+  width: 100%;
+  height: 35vh;
+  margin: 8em auto;
+}
+
+.incluir-palavra {
+  text-align: center;
+  margin: 50px 0 0 0;
+  font-size: 1.5em;
+ }
+
+.palavra-incluir {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  background: #5CACEE;
+  width: 250px;
+  height: 2em;
+  border-radius: 50px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+button {
+  width: 9em;
+  height: 2.5em;
+  font-size: 1em;
+  border-radius: 1em;
+  cursor: pointer;
+  border: 0;
+}
+
+.bt-incluir {
+  background: #0000CD;
+  color: #fff;
+  position: relative;
+  margin-top: 1.5em;
+}
+
+.bt-comecar-jogo{
+  text-align: center;
+  margin: 0px auto;
+}
+  
+.bt-iniciar{
+  height: 2.5em;
+  margin: 80px auto;
+  background: #0000CD;
+  color: #fff;
+  font-size: 1.5em;
+}
+  
+/* TABULEIRO 2 */  
+#tabuleiro2, #tabuleiro2-base {
+  width: 100%;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.flex-container  {
+  width: 100%;
+  display: flex;
+}
+
+#item1 {
+	width: 10%;
+}
+
+.forca-inicial, .forca-inicial1, .forca-inicial2, .forca-inicial3, 
+.forca-inicial4, .forca-inicial5, .forca-inicial6, .forca-inicial7 {
+  height: 65vh;
+	width: 60%;
+	display: inline-block;
+	margin: 30px auto 0 auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 95% 100%;
+}
+
+.forca-inicial {
+  background-image: url("../imagens/aranha1.png");
+}
+
+.forca-inicial2 {
+  background-image: url("../imagens/aranha2.png");
+}
+
+.forca-inicial3 {
+  background-image: url("../imagens/aranha3.png");
+}
+
+.forca-inicial4 {
+  background-image: url("../imagens/aranha4.png");
+}
+
+.forca-inicial5 {
+  background-image: url("../imagens/aranha5.png");
+}
+
+.forca-inicial6 {
+  background-image: url("../imagens/aranha6.png");
+}
+
+.forca-inicial7 {
+  background-image: url("../imagens/aranha7.png");
+}
+
+.item-flex {
+  height: 60vh;
+	width: 30%;
+	margin: 0 auto;  
+}
+
+.letras-digitadas {
+	margin: 60px 10px 0 30px;
+}
+
+.letras {
+	color: #ff0000;
+  font-weight: bold;
+  letter-spacing: .5em;
+  font-size: 1.5em;
+}
+
+textarea {
+/*  background:url(../imagens/oneeducation.png) center center no-repeat; */
+	box-shadow: 0 0 0 0;
+	outline: 0;
+  border:0px solid #888;
+	resize: none;
+  background: transparent;
+}
+
+.bt-jogoNovo {
+	background: #2933e3;
+  color: #fff;
+	margin: 0 2em 0 40px;
+}
+
+.bt-desistir {
+	background: #ff9a9a;
+  color: #fff;
+	margin: 30PX 2em 0 40px;
+}
+
+.palavra-escolhida{
+	width: 80%;
+	margin: 45px 0 0 0;
+}
+
+.palavra-escolhida p {
+  margin: 0 0 10px 25px;
+	font-weight: bold;
+}
+
+ul {
+	width: 60%;
+}
+
+ul, li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 12px;
+  font-size: 1.2em;
+}
+
+li {
+  width: 25px;
+  text-align: center;
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.borda-superior {
+  border-top: 3px solid #000;
+  color: #B0E2FF;
+}
+
+.oracle {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  margin-top: 80px;
+}
+
+footer{
+  position: absolute;
+	bottom: 0;
+  background: #C1CDCD;
+  color: #6E7B8B;
+  width: 100%;
+  height: 2em;
+  box-sizing: border-box;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 0.8em
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 900px) /*  TABLET */ {
+  body {
+    overflow: scroll;
+    height: 70vh;      
+  }
+
+  header{
+    background-size: 5% 95%;
+    margin: 20px 30px;
+    padding: 10px 0 0 0;
+  }
+
+  .titulo h1 {
+    margin-top: 20px;
+  }
+
+  #tabuleiro1 {
+    margin-top: 300px;
+  }
+
+  #tabuleiro2-base {
+    margin: 0px 0 0 0;
+    width: 100%;
+  }
+
+  /*tabuleiro 2 */
+  #item1 {
+    width: 0%;
+  }
+
+  .flex-container  {
+    width: 100%;
+    height: 45vh;
+    margin: 50px 50px 0 50px;
+  }
+
+  .forca-inicial, .forca-inicial1, .forca-inicial2, .forca-inicial3, 
+  .forca-inicial4, .forca-inicial5, .forca-inicial6, .forca-inicial7 {
+    width: 75%;
+    background-size: 95% 70%;
+    margin: 0 0 0 -120px;
+  }
+
+  textarea {
+    width: 200px;
+  }
+    
+  .item-flex {
+    width: 15%;
+  }
+
+  .letras-digitadas {
+    width: 100%;
+    margin: 60px 10px 0 5px;
+  }
+
+  .bt-jogoNovo {
+    margin-top: 100px;
+  }
+
+  .bt-desistirJogo{
+    margin-top: 20px;
+  }
+
+  .palavra-escolhida{
+    width: 95%;
+    margin: 100px 0 0 0;
+  }
+
+  ul { 
+    width: 100%; 
+    padding: 0 0;
+  }
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 425px) /*CELULAR */ {
+  body{ 
+    width: 100%;
+    height: 90vh;
+  }
+
+  header{
+    background-size: 5% 65%;
+    margin: 20px 30px;
+    padding: 5px 0 0 0;
+  }
+
+ #tabuleiro1 {
+     height: 24vh;
+  }
+
+ .titulo h1 {
+    margin-top: -30px;
+    font-size: 1.5em;
+    color:#888;
+  }
+
+ /* TABULEIRO 2 */
+ .forca-inicial, .forca-inicial1, .forca-inicial2, .forca-inicial3, 
+ .forca-inicial4, .forca-inicial5, .forca-inicial6, .forca-inicial7 {
+    width: 97%;
+    height: 80vh;
+    margin: -25px auto 0 -40px;
+    position: absolute;
+  }
+ 
+ .letras-digitadas { 
+    width:100%;
+    margin: 380px 10px 0 -30px;
+  }
+
+  .letras-digitadas p { 
+     width:300px;
+  }
+
+ .letras {
+    color: #ff0000;
+    font-weight: bold;
+    letter-spacing: .5em;
+    font-size: 1.5em;
+  }
+
+ textarea {
+    width: 300px;
+    height: 2em;
+    background: transparent;
+  }
+
+ #tabuleiro2-base{
+    margin: 40px 0 0 0;
+  }
+
+ ul {
+  	width: 90%;
+  }
+
+ li {
+    width: 12px;
+  }
+
+ button {
+    width: 9em;
+    height: 2em;
+    font-size: 0.9em;
+    border-radius: .65em;
+  }
+
+ .item-flex { /*BOTOES */
+    display: inline-block;
+    width: 1px;
+    margin: 110px 0 0 0;
+  }
+
+ .bt-novoJogo {
+    vertical-align: top;
+    margin: 20px 0 0 140px;
+  }
+
+ .bt-jogoNovo {
+    float: right;
+  }
+
+ .bt-desistirJogo {
+    vertical-align: top;
+    margin: 0 0 0 160px;
+  }
+
+ .bt-desistir {
+    float:left;
+    margin-top: -27px;
+  }
+
+ .oracle {
+    /*  display:none !important*/
+    display: inline-block;
+    position: relative;
+    margin: 90px 0 0 138px;
+    opacity: .3;
+ }
+ .oracle img {
+    max-width: 70%;
+    max-height: 90%;
+ }
+
+}
+ 
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 395px) /*CELULAR */ {
+  body{ 
+    width: 100%;
+    height: 90vh;
+ }
+
+  header{
+    background-size: 5% 65%;
+    margin: 20px 30px;
+    padding: 5px 0 0 0;
+ }
+
+ #tabuleiro1 {
+     height: 25vh;
+ }
+
+ .titulo h1 {
+    margin-top: -30px;
+    font-size: 1.5em;
+    color:#888;
+ }
+
+ /* TABULEIRO 2 /////////////////////////////////////////////////////*/
+ .forca-inicial, .forca-inicial1, .forca-inicial2, .forca-inicial3, 
+ .forca-inicial4, .forca-inicial5, .forca-inicial6, .forca-inicial7 {
+    width: 99%;
+    height: 73vh;
+    margin: -25px auto 0 -50px;
+    position: absolute;
+ }
+ 
+ .letras-digitadas { 
+    width:100%;
+    margin: 360px 10px 0 -30px;
+ }
+
+  .letras-digitadas p { 
+     width:300px;
+ }
+
+ .letras {
+    color: #ff0000;
+    font-weight: bold;
+    letter-spacing: .5em;
+    font-size: 1em;
+ }
+
+ textarea {
+    width: 300px;
+    height: 2.5em;
+    background: transparent;
+ }
+
+ #tabuleiro2-base{
+    margin: 70px 0 0 0;
+ }
+ .palavra-escolhida {
+    margin-top: 90px;
+ }
+
+ ul {
+  	width: 90%;
+ }
+
+ li {
+    width: 12px;
+    font-size: 1em;
+ }
+
+ button {
+    width: 9em;
+    height: 2em;
+    font-size: 0.9em;
+    border-radius: .65em;
+ }
+
+ .item-flex { /*BOTOES */
+    display: inline-block;
+    width: 1px;
+    margin: 90px 0 0 0;
+ }
+
+ .bt-novoJogo {
+    vertical-align: top;
+    margin: 5px 0 0 130px;
+ }
+
+ .bt-jogoNovo {
+    float: right;
+ }
+
+ .bt-desistirJogo {
+    vertical-align: top;
+    margin: 0 0 0 140px;
+ }
+
+ .bt-desistir {
+    float:left;
+ }
+
+ .oracle {
+/*  display:none !important*/
+display: inline-block;
+position: relative;
+margin: 55px 0 0 130px;
+opacity: .3;
+}
+ .oracle img {
+  max-width: 70%;
+  max-height: 90%;
+}
+
+}
+  
