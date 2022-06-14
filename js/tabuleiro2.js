@@ -1,7 +1,7 @@
 //var palavras = ['RUA','PARAIBA','PRAIA','TERRA','CEARA','PASSARO','ALDEIA','OURO','JORNAL','REVISTA',
 //'BESOURO','PRATA','BANANA','LARANJA','PONTE','LAPIS','FONE','PREDIO','MACA']
 //var dicas = ['TEM NA CIDADE','ESTADO','FÉRIAS','PLANETA','ESTADO','ANIMAL','MENOS QUE CIDADE','RIQUEZA','INFORMAÇÃO','INFORMAÇOA','ANIMAL','RIQUEZA','FRUTA','FRUTA','LIGA PONTOS','ESCRITÓRIO','TECNOLOGIA','TECNOLOGIA','CONSTRUÇÃO','FRUTA']
-palavras = JSON.parse(localStorage.getItem('palavras'));
+palavras = localStorage.getItem('palavras'));
 console.log('recolhidas = ' + palavras);
 var incluir;
 var letrasDigitadas=[];
